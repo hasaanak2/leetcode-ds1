@@ -10,5 +10,13 @@ public class FibonacciSequence {
         double b = 1.0;
 
         System.out.print(a + ", " + b + ", ");
+
+        for(int i = 2; i < 100; i++){
+            double c = a + b;
+            System.out.print(c + ", ");
+
+            a = b;
+            b = c;
+        }
     }
 }
