@@ -5,13 +5,14 @@ import java.util.Arrays;
 * Print the value of the merged array
 * and ensure the arrays values are sorted.
  */
+
 public class MergeSortedArray {
     public static void main(String[] args) {
-        int[] array1 = {2, 7, 13};
-        int[] array2 = {11, 2, 5};
+        int[] array1 = {11, 2, 1, 7, 5, 0};
+        int[] array2 = {13, 0, 21, 4, 3, 9};
 
-        int[] mergedArray = (array1, array2);
-        int middleValue = (mergedArray);
+        int[] mergedArray = mergeAndSort(array1, array2);
+        int middleValue = getMiddleValue(mergedArray);
 
         System.out.println("Merged and Sorted Array: " + Arrays.toString(mergedArray));
         System.out.println("Middle Value: " + middleValue);
@@ -23,7 +24,8 @@ public class MergeSortedArray {
         Arrays.sort(mergedArray);
         return mergedArray;
     }
-
-
-
+    private static int getMiddleValue(int[] array) {
+        int middleIndex = array.length / 2;
+        return array[middleIndex];
+    }
 }
